@@ -11,8 +11,9 @@ Style List:
 7.  Banner Styles
 8.  Content Styles
 9.  Footer Styles
-10. Tablet Styles
-11. Desktop Styles
+10. Phone Media Queries
+11. Tablet Media Queries
+12. Desktop Media Queries
 */
 
 /*Dont Delete*/
@@ -35,6 +36,12 @@ body {
 
 h1,h2,h3,h4,h5,h6,label {
     color: #ffcb00;
+}
+
+/*  Link Color */
+a:link {
+    color: #ffcb00;
+
 }
 
 /*--Text Color Overides--*/
@@ -370,8 +377,23 @@ a.pure-button-primary {
 /*  position: fixed;  Makes Footer Stick*/
 }
 
+
 /*
- * -- 10. TABLET (AND UP) MEDIA QUERIES --
+ * -- 10. Mobile (AND BELOW) MEDIA QUERIES --
+ * On mobile and other small devices, we want to over-ride some
+ * of the desktop and tablet styles.
+ */
+@media (max-width: 47em) {
+
+  .home-menu .pure-menu-heading {
+      font-size: 0px;
+
+  }
+
+}
+
+/*
+ * -- 11. TABLET (AND UP) MEDIA QUERIES --
  * On tablets and other medium-sized devices, we want to customize some
  * of the mobile styles.
  */
@@ -400,10 +422,15 @@ a.pure-button-primary {
 }
 
 /*
- * -- 11. DESKTOP (AND UP) MEDIA QUERIES --
+ * -- 12. DESKTOP (AND UP) MEDIA QUERIES --
  * On desktops and other large devices, we want to over-ride some
  * of the mobile and tablet styles.
  */
 @media (min-width: 78em) {
+
+  .home-menu .pure-menu-heading {
+      font-size: 125%;
+
+  }
 
 }
