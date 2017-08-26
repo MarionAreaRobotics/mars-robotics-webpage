@@ -181,23 +181,6 @@ a:link {
           mix-blend-mode: screen;
         }
 
-/*
- * -- 4. PURE FORM STYLES --
- * Style the form inputs and labels
- */
-.pure-form label {
-    margin: 1em 0 0;
-    font-weight: bold;
-    font-size: 100%;
-}
-
-.pure-form input[type] {
-    border: 2px solid #ddd;
-    box-shadow: none;
-    font-size: 100%;
-    width: 100%;
-    margin-bottom: 1em;
-}
 
 /*
  * -- 5. PURE BUTTON STYLES --
@@ -221,45 +204,221 @@ a.pure-button-primary {
 
 /*
  * -- 6. NAV STYLES --
- * I want to customize how my .pure-menu looks at the top of the page
  */
 
-.home-menu {
-    padding: 0.5em;
+
+/* header */
+
+.header {
+  background-color: #000;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  color: #ffcb00;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  color: #0000ee;
+}
+
+.header .logo {
+  color: #ffcb00;
+  display: block;
+  float: left;
+  font-weight: 400;
+  font-size: 125%;
+  padding: 20px 15px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #ffcb00;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #ffcb00;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* section */
+
+.section {
+  overflow: hidden;
+  margin: auto;
+  max-width: 1400px;
+}
+
+.section a {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.section a img {
+  width: 100%;
+  display: block;
+}
+
+.section a span {
+  color: #fff;
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+  font-size: 2em;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.section-split a span {
+  display: none;
+}
+
+.section-split a:hover span {
+  display: block;
+}
+
+
+/* Dropdown Button */
+.container {
+    overflow: hidden;
+    background-color: #000;
+}
+
+.container a {
+    float: left;
+    font-size: 16px;
+    color: #ffcb00;
     text-align: center;
-    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
-}
-.home-menu {
-    background: #000000;
+    padding: 20px 20px;
+    text-decoration: none;
 }
 
-.pure-menu-children {
-    background: #000000;
+.dropdown {
+    float: left;
+    overflow: hidden;
 }
 
-.pure-menu.pure-menu-fixed {
-    z-index: 4;
-}
-
-.home-menu .pure-menu-heading {
-    color: #ffcb00;
-    font-weight: 400;
-    font-size: 125%;
-}
-
-.home-menu .pure-menu-selected a {
-    color: #0000ee;
-}
-
-.home-menu a {
-    color: #ffcb00;
-}
-.home-menu li a:hover,
-.home-menu li a:focus {
-    background: none;
+.dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 16px;
     border: none;
-    color: #0000ee;
+    outline: none;
+    color: #ffcb00;
+    padding: 20px 20px;
+    background-color: inherit;
 }
+
+.container a:hover, .dropdown:hover .dropbtn {
+    color: #0000bb;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    font-size: 16px;
+    color: #ffcb00;
+    padding: 5px 15px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    color: #0000bb;
+}
+
+.show {
+    display: block;
+}
+
 
 /*
  * -- 7. BANNER STYLES --
@@ -383,20 +542,18 @@ a.pure-button-primary {
  * On mobile and other small devices, we want to over-ride some
  * of the desktop and tablet styles.
  */
-@media (max-width: 47em) {
 
-  .home-menu .pure-menu-heading {
-      font-size: 0px;
 
-  }
 
-}
+
 
 /*
  * -- 11. TABLET (AND UP) MEDIA QUERIES --
  * On tablets and other medium-sized devices, we want to customize some
  * of the mobile styles.
  */
+
+/* 48em = 768px */
 @media (min-width: 48em) {
 
     /* We increase the body font size */
@@ -404,14 +561,24 @@ a.pure-button-primary {
         font-size: 16px;
     }
 
-    /* We can align the menu header to the left, but float the
-    menu items to the right. */
-    .home-menu {
-        text-align: left;
+    .section-split a {
+      width: 50%;
     }
-        .home-menu ul {
-            float: right;
-        }
+
+    .header li {
+      float: left;
+    }
+    .header li a {
+      padding: 20px 30px;
+    }
+    .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .header .menu-icon {
+      display: none;
+    }
 
 
     /* We remove the border-separator assigned to .l-box-lrg */
@@ -432,5 +599,6 @@ a.pure-button-primary {
       font-size: 125%;
 
   }
+
 
 }
