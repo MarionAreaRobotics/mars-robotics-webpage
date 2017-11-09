@@ -50,7 +50,7 @@ a:link {
 }
 
 .purple-text {
-  color: #7f0081 !important;
+  color: #420284 !important;
 }
 
 .red-text {
@@ -67,7 +67,7 @@ a:link {
 }
 
 .purple-over {
-  background-color: #4e004f !important;
+  background-color: #420284 !important;
 }
 
 .red-over {
@@ -110,7 +110,7 @@ a:link {
 }
 
 .border-muses-trim {
-  border-color: #7f0081 !important;
+  border-color: #5603af !important;
 }
 
 .border-muses-thin {
@@ -177,7 +177,7 @@ a:link {
           }
 
         .icon-purple:hover {
-      	  background-color: #7f0081; /* The color you want the icon to change to */
+      	  background-color: #420284; /* The color you want the icon to change to */
           mix-blend-mode: screen;
         }
 
