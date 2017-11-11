@@ -91,6 +91,10 @@ a:link {
     padding: 2em;
 }
 
+.l-box-pad {
+    padding: 2em 6em;
+}
+
 .pure-img-responsive {
     max-width: 100%;
     height: auto;
@@ -98,6 +102,19 @@ a:link {
 
 .is-center {
     text-align: center;
+}
+
+.center-align {
+  margin: auto;
+  width: 45%;
+}
+
+.right-align {
+  text-align: right !important;
+}
+
+.left-align {
+  text-align: left !important;
 }
 
 /*--BORDER TRIMS--*/
@@ -593,9 +610,13 @@ a.pure-button-primary {
  * of the desktop and tablet styles.
  */
 
+ @media (max-width: 48em) {
 
+   .center-align {
+      width: 90%;
+   }
 
-
+ }
 
 /*
  * -- 11. TABLET (AND UP) MEDIA QUERIES --
@@ -636,6 +657,10 @@ a.pure-button-primary {
         border: none;
     }
 
+    .center-align {
+        width: 85%;
+    }
+
 }
 
 /*
@@ -649,6 +674,5 @@ a.pure-button-primary {
       font-size: 125%;
 
   }
-
 
 }
