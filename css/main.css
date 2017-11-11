@@ -44,6 +44,8 @@ a:link {
 
 }
 
+/*--COLORS--*/
+
 /*--Text Color Overides--*/
 .gold-text {
     color: #ffcb00 !important;
@@ -100,23 +102,39 @@ a:link {
 
 /*--BORDER TRIMS--*/
 
-/*--COLORS--*/
+/*--TEAM COLORS--*/
+/*--TITANS--*/
 .border-titan-trim {
   border-color: #CB0000 !important;
 }
 
 .border-titan-thin {
-  border-color: #ffcb00 !important;
+  border-color: #CB0000 !important;
 }
 
+
+/*--MUSES--*/
 .border-muses-trim {
   border-color: #5603af !important;
 }
 
 .border-muses-thin {
-  border-color: #ffcb00 !important;
+  border-color: #5603af !important;
 }
 
+
+/*--OLYMPIANS--*/
+.border-ohms-trim {
+  border-color: #015aff !important;
+}
+
+.border-ohms-thin {
+  border-color: #015aff !important;
+}
+
+
+
+/*--DEFAULT BORDERS--*/
 /*--THICK--*/
 .border-top-trim {
   border-top-width: 5px;
@@ -131,7 +149,6 @@ a:link {
 }
 
 /*--THIN--*/
-
 .border-top-thin {
   border-top-width: 2px;
   border-top-style: solid;
@@ -167,7 +184,7 @@ a:link {
         }
 
       .icon-blue:hover {
-    	  background-color: #0000bb; /* The color you want the icon to change to */
+    	  background-color: #015aff; /* The color you want the icon to change to */
     	  mix-blend-mode: screen;
       }
 
@@ -230,11 +247,6 @@ a.pure-button-primary {
   padding: 20px 20px;
   text-decoration: none;
   color: #ffcb00;
-}
-
-.header li a:hover,
-.header .menu-btn:hover {
-  color: #0000ee;
 }
 
 .header .logo {
@@ -388,10 +400,6 @@ a.pure-button-primary {
     background-color: inherit;
 }
 
-.container a:hover, .dropdown:hover .dropbtn {
-    color: #0000bb;
-}
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -411,13 +419,55 @@ a.pure-button-primary {
     text-align: left;
 }
 
-.dropdown-content a:hover {
-    color: #0000bb;
-}
-
 .show {
     display: block;
 }
+
+/*--HOVER STYLES--*/
+.header li a:hover,
+.header, 
+.menu-btn:hover,
+.container a:hover, 
+.dropdown:hover,
+.dropbtn:hover,
+.logo:hover,
+.dropdown-content a:hover {
+  color: #0000ee !important;
+  }
+
+  .titanNav.header li a:hover,
+  .titanNav.header,
+  .titanNav.menu-btn:hover,
+  .titanNav.container a:hover, 
+  .titanNav.dropdown:hover,
+  .titanNav.dropbtn:hover,
+  .titanNav.logo:hover,
+  .titanNav.dropdown-content a:hover {
+    color: #CB0000 !important;
+    }
+
+  .ohmNav.header li a:hover,
+  .ohmNav.header, 
+  .ohmNav.menu-btn:hover,
+  .ohmNav.container a:hover, 
+  .ohmNav.dropdown:hover, 
+  .ohmNav.dropbtn:hover,
+  .ohmNav.logo:hover,
+  .ohmNav.dropdown-content a:hover {
+    color: #015aff !important;
+    }
+
+  .musesNav.header li a:hover,
+  .musesNav.header, 
+  .musesNav.menu-btn:hover,
+  .musesNav.container a:hover, 
+  .musesNav.dropdown:hover, 
+  .musesNav.dropbtn:hover,
+  .musesNav.logo:hover,
+  .musesNav.dropdown-content a:hover {
+    color: #5603af !important;
+    }
+
 
 
 /*
