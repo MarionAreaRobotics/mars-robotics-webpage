@@ -1,6 +1,7 @@
 
 /*
-Edited by @UsernameError3
+Authors: @UsernameError3
+
 Style List:
 1.  Base Styles
 2.  Layout Styles
@@ -63,6 +64,10 @@ a:link {
     color: #0000bb !important;
 }
 
+.green-text {
+  color: #00ff00 !important;
+}
+
 /*--Background Color Overide--*/
 .gold-over {
     background-color: #ffcb00 !important;
@@ -78,6 +83,10 @@ a:link {
 
 .blue-over {
     background-color: #000040 !important;
+}
+
+.grey-over {
+  background-color: #202020 !important;
 }
 
 /*
@@ -106,7 +115,6 @@ a:link {
 
 .center-align {
   margin: auto;
-  width: 45%;
 }
 
 .right-align {
@@ -149,7 +157,14 @@ a:link {
   border-color: #015aff !important;
 }
 
+/*--PROGRAMMERS--*/
+.border-code-trim {
+  border-color: #00ff00 !important;
+}
 
+.border-code-thin {
+  border-color: #00ff00 !important;
+}
 
 /*--DEFAULT BORDERS--*/
 /*--THICK--*/
@@ -178,6 +193,30 @@ a:link {
   border-bottom-color: #ffcb00;
 }
 
+.border-programmers {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #444;
+}
+
+/*--CODE BOX STYLES--*/
+.codebox-small {
+  /* Below are styles for the codebox (not the code itself) */
+  width: 30%;
+  padding: 10px;
+}
+
+.codebox-medium {
+  /* Below are styles for the codebox (not the code itself) */
+  width: 50%;
+  padding: 10px;
+}
+
+.codebox-large {
+  /* Below are styles for the codebox (not the code itself) */
+  width: 80%;
+  padding: 10px;
+}
 
 
 /*
@@ -225,6 +264,15 @@ a:link {
     padding: 0.5em 2em;
     border-radius: 5px;
     font-weight: bold;
+}
+
+a.pure-button-code {
+  background-color: #001500;
+  color: #00CC00;
+  padding: 0.5em 2em;
+  border-radius: 8px;
+  box-shadow: 0 0 3px #00CC00;
+  font-weight: bold;
 }
 
 a.pure-button-primary {
@@ -485,65 +533,63 @@ a.pure-button-primary {
     color: #5603af !important;
     }
 
+  .codeNav.header li a:hover,
+  .codeNav.header, 
+  .codeNav.menu-btn:hover,
+  .codeNav.container a:hover, 
+  .codeNav.dropdown:hover, 
+  .codeNav.dropbtn:hover,
+  .codeNav.logo:hover,
+  .codeNav.dropdown-content a:hover {
+    color: #00ff00 !important;
+    }
+
 
 
 /*
  * -- 7. BANNER STYLES --
  */
 
-.titan-banner {
-        height: 800px;
-        width: 100%;
-        display: table;
-        color: #000;
-        background: url(../img/titan-banner.jpg) no-repeat center center;
-        background-size: cover;
-}
-
-.ohm-banner {
-        height: 800px;
-        width: 100%;
-        display: table;
-        color: #000;
-        background: url(../img/ohm-banner.jpg) no-repeat center center;
-        background-size: cover;
-}
-
-.muse-banner {
-        height: 800px;
-        width: 100%;
-        display: table;
-        color: #000;
-        background: url(../img/muse-banner.jpg) no-repeat center center;
-        background-size: cover;
-}
-
 .banner {
-    height: 800px;
-    width: 100%;
-    display: table;
-    color: #000;
-    background: url(../img/banner.jpg) no-repeat center center;
-    background-size: cover;
+  display: flex;
+  flex-direction: column;
+  max-height: 800px;
+  justify-content:flex-end;
+  overflow: hidden;
+  padding-top: 20px;
 }
 
-.banner-head {
-    max-width: 100%;
-    vertical-align: middle;
-    margin-bottom: 0;
-    margin: auto;
-    margin-top: 5.5em;
-    position: relative;
+.banner pure-img-responsive {
+  display: block;
 }
 
-.banner-text {
-    font-size: 50px;
-    font-weight: bold;
-    line-height: 100%;
-    color: #ffcb00;
-    -webkit-text-stroke: 2px #000;
+.banner-container {
+  position: relative;
+  text-align: center;
 }
 
+/* Centered text */
+.banner-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner-button {
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner-font {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 100%;
+  color: #ffcb00;
+  -webkit-text-stroke: 2px #000;
+}
 
 /*
  * -- 8. CONTENT STYLES --
@@ -592,6 +638,12 @@ a.pure-button-primary {
     color: #ffcb00;
 }
 
+/* This is the class used for the light-background areas. */
+.ribbon3 {
+  background: #202020;
+  color: #00ff00;
+}
+
 /*
  * -- 9. FOOTER STYLES --
  */
@@ -610,10 +662,38 @@ a.pure-button-primary {
  * of the desktop and tablet styles.
  */
 
+ @media (max-width: 24em) {
+
+    .banner-font {
+      display: none;
+    }
+
+    .banner-button {
+      top: 85%;
+      font-size: 70%;
+    }
+
+}
+
+
  @media (max-width: 48em) {
 
    .center-align {
       width: 90%;
+   }
+
+   .banner {
+    flex-direction: column;
+    padding-top: 60px;
+   }
+
+   .banner-font {
+     font-size: 25px;
+     -webkit-text-stroke: 1px #000;
+   }
+
+   .banner-button {
+    top: 74%;
    }
 
  }
@@ -651,6 +731,19 @@ a.pure-button-primary {
       display: none;
     }
 
+    .banner {
+      flex-direction: column;
+      padding-top: 50px;
+    }
+
+    .banner-font {
+      font-size: 35px;
+      -webkit-text-stroke: 1.5px #000;
+    }
+
+    .banner-button {
+      top: 68%;
+    }
 
     /* We remove the border-separator assigned to .l-box-lrg */
     .l-box-lrg {
@@ -673,6 +766,20 @@ a.pure-button-primary {
   .home-menu .pure-menu-heading {
       font-size: 125%;
 
+  }
+
+  .banner {
+    flex-direction: row;
+    padding-top: 40px;
+  }
+
+  .banner-font {
+    font-size: 50px;
+    -webkit-text-stroke: 2px #000;
+  }
+
+  .banner-button {
+    top: 62%;
   }
 
 }

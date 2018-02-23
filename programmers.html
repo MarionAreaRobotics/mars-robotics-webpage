@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Title -->
+  <title>Mars Robotics &ndash; Programmers</title>
+
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Official MHS Robotics Website!" />
+  <meta name="keywords" content="MARS, Robotics, Marion, Highschool, FTC, First,
+    Tech, Challenge, Southern, Illinois, Ohm's, Olympians, Mechanical, Muses, Transistor, Titans, @MARS_Robotics" />
+  <meta name="authors" content="@UsernameError3" />
+  <meta name="copyright" content="MARS_Robotics" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="img/logos/logo_fav.png" />
+
+  <!-- CSS -->
+  <!--Requires Internet-->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css">
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="css/google-code-prettify/prettify.css">
+  <link rel="stylesheet" href="css/google-code-prettify/robotics-dark.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- JS -->
+  <script src="js/nav.js"></script>
+  <script type="text/javascript" src="js/google-code-prettify/prettify.js"></script>
+
+</head>
+
+<body onload="PR.prettyPrint()">
+
+  <!-- Header / Menu Bar -->
+  <header class="header border-bottom-thin border-code-thin codeNav">
+    <a href="index.html" class="logo codeNav">MARS ROBOTICS</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn">
+      <span class="navicon"></span>
+    </label>
+    <ul class="menu">
+      <li class="container codeNav">
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn codeNav">Teams</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="titans.html">Titans</a>
+            <a href="olympians.html">Olympians</a>
+            <a href="muses.html">Muses</a>
+            <a href="programmers.html">Programmers</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <a href="#Setup">Setup</a>
+      </li>
+      <li>
+        <a href="#Syntax">Syntax</a>
+      </li>
+      <li>
+        <a href="#Phones">Phones</a>
+      </li>
+      <li>
+        <a href="#Samples">Samples</a>
+      </li>
+    </ul>
+  </header>
+
+  <!-- Fancy Banner -->
+  <div class="banner">
+    <img class="pure-img-responsive" width="4032" height="1702" src="img/banners/code_banner.jpg">
+  </div>
+
+  <!-- Setup (Start of Black Background)-->
+  <a name="Setup"></a>
+  <div class="content-color">
+    <div class="content border-top-trim border-code-trim">
+      <h1 class="content-head is-center">MARS-ROBOTICS PROGRAMMERS</h1>
+      <h3 class="content-subhead is-center">FTC TEAMS: 5187 - 11462 - 6206</h3>
+      <p class="l-box-pad is-center">
+        - Established: MHS 2017 -</br>
+        This is a programmers section aimed at teaching new programmers, having introductory resources, and guides on configuring
+        robots.
+      </p>
+      </br>
+
+      <h2 class="content-head is-center">Installing & Configuring Android SDK</h2>
+      <p class="is-center">
+        If the environment is already setup for you, continue on to the "Syntax" section.
+        </br>
+        If starting from scratch, follow the instructions to setup your environment.
+      </p>
+      </br>
+      </br>
+
+      <div class="pure-g is-center">
+        <div class="pure-u-1 pure-u-lg-1-2">
+          <p>
+            This button will take you to the Android SDK downloads page.
+            </br>
+            Download the correct package for your operating system:
+            </br>
+            Windows, MacOS, Linux
+          </p>
+          <a class="pure-button pure-button-code" href="https://developer.android.com/studio/index.html#downloads" target="_blank">SDK DOWNLOAD</a>
+          </br>
+          </br>
+        </div>
+        <div class="pure-u-1 pure-u-lg-1-2">
+          <p>
+            This button will take you to the Android SDK install guide.
+            </br>
+            Select which operating system you would like help with:
+            </br>
+            Windows, MacOS, Linux
+          </p>
+          <a class="pure-button pure-button-code" href="https://developer.android.com/studio/install.html" target="_blank">SDK INSTALL</a>
+          </br>
+          </br>
+        </div>
+        <div class="pure-u-1 pure-u-lg-1-2">
+          <p>
+            This button will take you to FTC App Repository on GitHub.
+            </br>
+            The app is continually updated on GitHub, with instructions on how to download it.
+            </br>
+            How you manage your code, and whether or not you choose to use GitHub is up to you.
+          </p>
+          <a class="pure-button pure-button-code" href="https://github.com/ftctechnh/ftc_app" target="_blank">FTC APP</a>
+          </br>
+          </br>
+        </div>
+        <div class="pure-u-1 pure-u-lg-1-2">
+          <p>
+            This button will take you to the FTC App Documentation on GitHub.
+            </br>
+            The Mars-Robotics programmers page is only a brief introduction.
+            </br>
+            The Official Documentation is very detailed, glance over it if you have further questions.
+          </p>
+          <a class="pure-button pure-button-code" href="https://github.com/ftctechnh/ftc_app/wiki/Android-Studio-Tutorial" target="_blank">FTC DOCUMENTATION</a>
+          </br>
+          </br>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Syntax (Start of GREY Ribbon)-->
+    <a name="Syntax"></a>
+    <div class="ribbon3 border-bottom-trim border-top-trim border-code-trim">
+      <div class="green-text">
+
+        <div class="content is-center">
+          <h1 class="content-head is-center green-text">The Basics of JAVA</h1>
+        </div>
+
+        <div class="pure-g">
+          <div class="pure-u-1 pure-u-lg-1-1 center-align">
+
+            <div class="codebox-large center-align">
+              <h3 class="is-center">COMMON JAVA KEYWORDS</h3>
+              <pre class="prettyprint linenums">
+"abstract" // an abstract class or method
+"assert" // with assertions enabled, throws an error if condition not fulfilled
+"boolean" // the Boolean type with values true and false
+"break" // breaks out of a switch or loop
+"byte" // the 8-bit integer type
+"case" // a case of a switch
+"catch" // the clause of a try block catching an exception
+"char" // the Unicode character type
+"class" // defines a class type
+"comments" // A feature that allows documentation to be ignored by the compiler. (// or /* ABC */)
+"continue" // continues at the end of a loop
+"default" // 1) the default clause of a switch, 2) denotes default implementation of an interface method
+"do" // the top of a do/while loop
+"double" // the double-precision floating-number type, Double is more complex than int & for bigger numbers
+"else" // the else clause of an if statement
+"enum" // an enumerated type
+"extends" // defines the parent class of a class
+"final" // a constant, or a class or method that cannot be overridden
+"finally" // the part of a try block that is always executed
+"float" // the single-precision floating-point type, basially for decimals
+"for" // a loop type
+"if" // a conditional statement
+"implements" // defines the interface(s) that a class implements
+"import" // imports a package
+"instanceof" // tests if an object is an instance of a class
+"int" // the 32-bit integer type
+"interface" // an abstract type with methods that a class can implement
+"long" // the 64-bit long integer type
+"main()" // Is the default method, usually in the format of "public static void main()"
+"native" // a method implemented by the host system
+"new" // allocates a new object or array
+"null" // a null reference
+"package" // a package of classes
+"private" // a feature that is accessible only by methods of this class
+"protected" // a feature that is accessible only by methods of this class, its children, and other classes in the same package
+"public" // a feature that is accessible by methods of all classes
+"return" // returns from a method
+"short" // the 16-bit integer type
+"static" // a feature that is unique to its class, not to objects of its class
+"strictfp" // Use strict rules for floating-point computations
+"string" // The use of multiple characters, Ex: "Hello"
+"super" // invoke a superclass constructor or method
+"switch" // a selection statement
+"synchronized" // a method or code block that is atomic to a thread
+"this" // the implicit argument of a method, or a constructor of this class
+"throw" // throws an exception
+"throws" // the exceptions that a method can throw
+"transient" // marks data that should not be persistent
+"try" // a block of code that traps exceptions
+"void" // denotes a method that returns no value
+"volatile" // ensures that a field is coherently accessed by multiple threads
+"while" // a loop
+              </pre>
+            </div>
+
+            <div class="codebox-large center-align">
+              <h3 class="is-center">VARIABLES, OPERATORS, & MATH</h3>
+              <pre class="prettyprint linenums">
+// VARIABLES
+int num = 1; // Variable "num" is equal to integer "1"
+char letter = 'A'; // Variable "letter" is equal to 'A'
+String str = "Hello World"; // Variable "str" is equal to "Hello World"
+float dec = 1024.45; // Variable "dec" is equal to the decimal "1024.45"
+double bigint = 99999999; // Variable "bigint" is equal to "999999999"
+int array[] = { 5, 10, 15, 20, 25, 30, 35, 40 }; // An array can hold several objects, in this case intergers
+
+// OPERATORS
+if (num == 1) {code} // If var num is equal(==) to 1, runs {code}
+if (num != 1) {code} // If var num is not(!) equal(=) to 1, runs {code}
+if (num > 0) {code} // If var num is greater(>) than 0, runs {code}
+if (num < 2) {code} // If var num is less(<) than 2, runs {code}
+if (num >= 1) {code} // If var num is greater(>) than or equal(=) to 1, runs {code}
+if (num <= 1) {code} // If var num is less(<) than or equal(=) to 1, runs {code}
+if (num > 0 && num < 10) {code} // If var num is between 0 AND(&&) 10, runs {code}
+if (num > 0 || num < 10) {code} // If var num is greater than 0, OR(||) less than 10 runs {code}
+if (!(num > 0 && num < 10)) {code} // If var num is not between 0 and 10, runs {code}
+if (num % 2) {code} // If var num has remainder(%) of 2, runs {code}
+
+// MATH -- Add, Subtract, Multiply, & Divide (Example: num = 1)
+int foo = num + num; // Var "foo" is equal to integer of var "num" + "num", 
+int foo = ( 2 = 1 + 1 ) // Example
+
+int foo = num - num; // Var "foo" is equal to integer of var "num" - "num", 
+int foo = ( 0 = 1 - 1 ) // Example
+
+int foo = num * num; // Var "foo" is equal to integer of var "num" * "num", 
+int foo = ( 1 = 1 x 1 ) // Example
+
+int foo = num / num; // Var "foo" is equal to integer of var "num" / "num", 
+int foo = ( 1 = 1 / 1 ) // Example
+
+// Math Operations
+num++; // Var num is increased by 1
+num--; // Var num is decreased by 1
+
+num == 2 // Example of var num is already equal to 2
+num += 10; // var num is equal to 2 + 10; num = 12
+num -= 10; // var num is equal to 2 - 10; num = 8
+num *= 10; // var num is equal to 2 x 10; num = 20
+num /= 2; // Var num is equal to 2 / 2; num = 1
+              </pre>
+            </div>
+
+            <div class="codebox-large center-align">
+              <h3 class="is-center">Basic Java Class Structure</h3>
+              <pre class="prettyprint linenums">
+// This tells the app that this is our opmode
+package org.firstinspires.ftc.teamcode; 
+
+// An import allows you to add classes and functionality from other packages
+// This specific import adds opmode support
+import com.qualcomm.robotcore.eventloop.opmode.OpMode; 
+
+// This specific import adds dc motor hardware support
+import com.qualcomm.robotcore.hardware.DcMotor;
+
+// This tells the Driver Phone where to put the opmode and what to call it
+@TeleOp(name="TeamName", group="Example")
+
+// A class is a starting container for your code, this class extends another class: OpMode
+public class ExampleTest extends OpMode { // Class Opening Curly Bracket
+
+    //This is the area which you should declare your variables for the program.
+    // A private variable means it can only be used within this program.
+    // Null means it is equal to nothing.
+    private DcMotor leftMotor1 = null;
+    
+    // An @Override Changes the scope of this method to only this program.
+    @Override 
+    public void init() { // Init Opening Curly Bracket
+
+        // Place your init code here
+        // The init() method runs once, which is mainly used for hardware mapping.
+        
+    } // Init Closing Curly Bracket
+
+    @Override
+    public void init_loop() { // InitLoop Opening Curly Bracket
+
+        // Place your init_loop code here
+        // The init_loop() method runs in a loop during the init which is primarily used for real-time telemetry.
+
+    } // InitLoop Closing Curly Bracket
+
+    @Override
+    public void start() { // Start Opening Curly Bracket
+
+        // Place any code here that needs to start at the same time as the loop, ex: time
+        // The start() method to run once when the driver hits play.
+
+    } // Start Closing Curly Bracket
+
+    @Override
+    public void loop() { // Loop Opening Curly Bracket
+
+        // Place your Main Loop code here
+        // Code to run repeatedlty (LOOPS) after the driver hits play but before they hit stop
+        // This is the main loop where you enter all your loob methods to enable them. This loop is the actual running program.
+
+    } // Loop Closing Curly Bracket
+
+    @Override
+    public void stop() { // Stop Opening Curly Bracket
+
+        // Place any code here that needs to run when the player hits stop.
+        // Example: telemetry.
+
+    } // Stop Closing Curly Bracket
+
+} // Class Closing Curly Bracket
+
+</pre>
+              <p class="is-center">
+                Just a simple java class that shows how java code should be formatted, the basic methods used for the first app, and how they are executed operatively. 
+                Knowing which method to place your code in makes a large programming task much easier. 
+                Sticking to the proper format and commenting your code makes your code easier to read for others.
+              </p>
+              </br>
+              </br>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Phones (Black Background)-->
+    <a name="Phones"></a>
+    <div class="content">
+      <div class="is-center">
+        <h1 class="content-head">ANDROID PHONES</h1>
+        <h3 class="gold-text">Phone Setup & Building</h3>
+      </div>
+
+      <div class="l-box is-center">
+        <P>
+          The entire phone setup & configuration process is very long & informative, which can be found here:
+        </p>
+        <a class="pure-button pure-button-code" href="programmers-phones.html" target="_blank">PHONE SETUP</a>
+        </br>
+        </br>
+      </div>
+
+      <div class="l-box is-center">
+        <h3 class="is-center">Building from Android SDK</h3>
+        <P>
+          Transferring the code from Android SDK to the Robot Controller requires you to build.
+        </p>
+      </div>
+
+      <div class="pure-g">
+        <div class="l-box pure-u-1 pure-u-lg-1-1 is-center">
+          <h4 class="">Step 1: Build</h4>
+          <img width="911" alt="phone-config" class="pure-img-responsive" src="img/android_studio/sdk_start_build.png">
+          <p>
+            The cyan circle shows the location of the run button. Press the run button when you would like to build a class to the phone.
+          </p>
+        </div>
+
+        <div class="l-box pure-u-1 pure-u-lg-1-1 is-center">
+          <h4 class="">Step 2: Select Device</h4>
+          <img width="624" alt="phone-config" class="pure-img-responsive" src="img/android_studio/sdk_select_device.png">
+          <p>
+            After pressing the run button, in the popup asking you to select your android device, select your phone and click "OK".
+          </p>
+        </div>
+
+        <div class="l-box pure-u-1 pure-u-lg-1-1 is-center">
+          <h4 class="">Step 3: Build Runs</h4>
+          <img width="842" alt="phone-config" class="pure-img-responsive" src="img/android_studio/sdk_build_running.png">
+          <p>
+            At the bottom of the editor, the bottom bar will show you the build process as its running.
+          </p>
+        </div>
+
+        <div class="l-box pure-u-1 pure-u-lg-1-1 is-center">
+          <h4 class="">Step 4: Build Finishes</h4>
+          <img width="669" alt="phone-config" class="pure-img-responsive" src="img/android_studio/sdk_build_finished.png">
+          <p>
+            When the build is finished, it will state that it is finished along with how long it took.
+          </p>
+        </div>
+
+        <div class="l-box pure-u-1 pure-u-lg-1-1 is-center">
+          <h4 class="">Step 5: Restart App</h4>
+          <img width="562" alt="phone-config" class="pure-img-responsive" src="img/android_studio/sdk_app_restart.png">
+          <p>
+            When you connected the phone, if you have the robot app open while building, another popup will ask you to "Restart TeamCode". 
+            </br>
+            The app will then proceed to restart on your android device.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  </div>
+
+  </br>
+  </br>
+  </br>
+  <!-- Samples (Start of Blue Ribbon)-->
+  <a name="Samples"></a>
+  <div class="gold-text grey-over border-top-trim border-code-trim">
+
+    <div class="content">
+      <div class="is-center">
+        <h2 class="content-head">SAMPLE CODE</h2>
+        <h4>FOR REFERENCE AND TEACHING NEW PROGRAMMERS.</h4>
+      </div>
+      <div class="content center-align">
+        <div class="pure-g is-center">
+          <div class="pure-u-1 pure-u-lg-1-1">
+            <p>
+              This button will take you to the sample code page.
+              </br>
+              </br>
+            </p>
+            <a class="pure-button pure-button-code" href="programmers-samples.html" target="_blank">SAMPLE CODE</a>
+            </br>
+            </br>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Padding -->
+    </br>
+  </div>
+
+
+  <!-- Footer -->
+  <div class="border-top-thin border-code-thin footer l-box is-center">
+    © 2018 MARS ROBOTICS
+  </div>
+
+  <!-- NOT A DUPLICATE! (Black Background Ends)-->
+  </div>
+
+
+</body>
+
+</html>
